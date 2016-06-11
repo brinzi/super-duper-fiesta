@@ -31,23 +31,8 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
-    less: {
-      development: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "app/styles/generated.css": "less/main.less" // destination file and source file
-        }
-      }
-    },
-
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-
-      },
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
@@ -64,10 +49,11 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss','less'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css','<%= yeoman.app %>/less/{,*/}*.less'],
+        tasks: ['less','newer:copy:styles', 'postcss'],
         options: {
           nospawn: true
+        }
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -435,9 +421,21 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
 
     //Less task
+    less: {
+      development: {
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2
+        },
+        files: {
+          "app/styles/generated.css": "app/less/main.less" // destination file and source file
+        }
+      }
+    }
 
   });
 

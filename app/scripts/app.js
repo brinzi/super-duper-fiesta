@@ -27,7 +27,8 @@ var app = angular
       .when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        css:'styles/generated.css'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
