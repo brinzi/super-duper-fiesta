@@ -1,0 +1,27 @@
+{
+  "name": "oase",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-animate": "^1.4.0",
+    "angular-aria": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
+    "angular-touch": "^1.4.0",
+    "ng-file-upload": "~11.0.0",
+    "angular-bootstrap": "^1.2.5",
+    "angular-ui": "^0.4.0",
+    "ngstorage": "^0.3.10",
+    "ngDatepicker": "*",
+    "ng-model": "ng.model#*",
+    "ng-magnify": "https://github.com/jotielim/ng-magnify"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "oaseApp"
+}

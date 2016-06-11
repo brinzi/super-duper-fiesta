@@ -1,0 +1,49 @@
+<div class="modal-header">
+  <h3>Register</h3>
+</div>
+<div id="modal-body" class="modal-body">
+  <form name="registerForm"  role="form">
+    <div class="form-group" ng-class="{ 'has-error': registerForm.user_email.$dirty && registerForm.user_email.$error.required }">
+      <label for="user_email">E-mail</label>
+      <input type="text" placeholder="E-mail/Username" name="user_email" id="user_email" class="form-control"
+             ng-model="user_email" required/>
+      <span ng-show="registerForm.user_email.$dirty && registerForm.user_email.$error.required"
+            class="help-block">Valid e-mail required</span>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': registerForm.name.$dirty &&registerForm.name.$error.required }">
+      <label for="name">Name</label>
+      <input type="text" placeholder="Name" name="name" id="name" class="form-control"
+             ng-model="name" required/>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': registerForm.surname.$dirty && registerForm.surname.$error.required }">
+      <label for="surname">Surname</label>
+      <input type="text" placeholder="Surname" name="name" id="surname" class="form-control"
+             ng-model="surname" required/>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': registerForm.password.$dirty && registerForm.password.$error.required }">
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" name="password" id="password" class="form-control"
+             ng-model="password" required/>
+      <span ng-show="registerForm.password.$dirty && registerForm.password.$error.required"
+            class="help-block">Password is required</span>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': registerForm.repassword.$dirty && registerForm.repassword.$error.required }">
+      <label for="repassword">Re- Password</label>
+      <input type="password" placeholder="Password" name="repassword" id="repassword" class="form-control"
+             ng-model="repassword" required/>
+      <span ng-show="registerForm.repassword.$dirty && registerForm.repassword.$error.required"
+            class="help-block">Password is required</span>
+    </div>
+    <div class="form-group">
+      <label for="date-birth" class="control-label">Birth date:</label>
+      <div class="control">
+        <input id="date-birth" class="form-control" type="date" ng-model="birthDate">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-click="doRegister()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
+
+
