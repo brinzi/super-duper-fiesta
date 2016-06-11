@@ -46,12 +46,7 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      styles: {
-        files: ['less/**/*.less'], // which files to watch
-        tasks: ['less'],
-        options: {
-          nospawn: true
-        }
+
       },
       bower: {
         files: ['bower.json'],
@@ -70,7 +65,9 @@ module.exports = function (grunt) {
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss']
+        tasks: ['newer:copy:styles', 'postcss','less'],
+        options: {
+          nospawn: true
       },
       gruntfile: {
         files: ['Gruntfile.js']
