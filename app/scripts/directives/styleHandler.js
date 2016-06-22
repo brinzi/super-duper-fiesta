@@ -30,4 +30,4 @@ app.directive('head', ['$rootScope','$compile',
       }
     };
   }
-]);
+])

@@ -20,7 +20,8 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'jkuri.datepicker'
+    'jkuri.datepicker',
+    'angularCSS'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,7 +29,7 @@ var app = angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
-        css:'styles/generated.css'
+        css:'/styles/generated.css'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -38,7 +39,8 @@ var app = angular
       .when('/', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
-        controllerAs: 'login'
+        controllerAs: 'login',
+        css:'/styles/main.css'
       })
       .when('views/register.html', {
         templateUrl: 'views/register.html',

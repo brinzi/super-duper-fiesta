@@ -432,7 +432,7 @@ module.exports = function (grunt) {
           optimization: 2
         },
         files: {
-          "app/styles/generated.css": "app/less/main.less" // destination file and source file
+          "app/styles/generated.css": "app/less/main_page.less" // destination file and source file
         }
       }
     }

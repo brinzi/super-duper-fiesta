@@ -26,6 +26,12 @@ angular.module('oaseApp')
         "timestamp": new Date(),
         "recommendation": "Go to home.",
         "result":"Some other result"
+      },
+      {
+        "id": 23,
+        "timestamp": new Date(),
+        "recommendation": "Go to home.",
+        "result":"Some other result"
       }
     ];
     $scope.user = $sessionStorage.user;
@@ -37,7 +43,6 @@ angular.module('oaseApp')
       else
         $scope.selectedReport = index;
     };
-
     $scope.loadImage = function () {
       $scope.openModal('lg');
     };
