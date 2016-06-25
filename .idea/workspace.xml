@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dbd4dcc4-5cb1-4e49-baa9-7b7b5e33473d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/main_page.less" afterPath="$PROJECT_DIR$/app/less/main_page.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/less/variables.less" afterPath="$PROJECT_DIR$/app/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/generated.css" afterPath="$PROJECT_DIR$/app/styles/generated.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
     </list>
     <ignored path="Oase.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/app/styles/generated.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="486" selection-start-line="0" selection-start-column="486" selection-end-line="0" selection-end-column="486" />
+              <caret line="0" column="471" selection-start-line="0" selection-start-column="471" selection-end-line="0" selection-end-column="471" />
               <folding />
             </state>
           </provider>
@@ -567,7 +562,7 @@
       <workItem from="1466879533923" duration="1812000" />
       <workItem from="1466881382350" duration="2176000" />
       <workItem from="1466883592311" duration="664000" />
-      <workItem from="1466886388984" duration="1375000" />
+      <workItem from="1466886388984" duration="1408000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1465646483888</created>
@@ -604,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466882879834</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="alt comment">
+      <created>1466887782201</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1466887782201</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150996000" />
+    <option name="totallyTimeSpent" value="151029000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -625,14 +627,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2455224" sideWeight="0.48192772" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.49107143" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48214287" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24553572" sideWeight="0.5180723" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611111" sideWeight="0.5870536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.45833334" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25297618" sideWeight="0.49100256" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35457516" sideWeight="0.41294643" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35515547" sideWeight="0.41294643" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48214287" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -676,7 +678,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Integrated less framework into application" />
     <MESSAGE value="un comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="un comment" />
+    <MESSAGE value="alt comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="alt comment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1104,7 +1107,7 @@
     <entry file="file://$PROJECT_DIR$/app/styles/generated.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="486" selection-start-line="0" selection-start-column="486" selection-end-line="0" selection-end-column="486" />
+          <caret line="0" column="471" selection-start-line="0" selection-start-column="471" selection-end-line="0" selection-end-column="471" />
           <folding />
         </state>
       </provider>
