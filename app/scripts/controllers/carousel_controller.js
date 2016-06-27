@@ -13,8 +13,8 @@ angular.module('ui.bootstrap').controller('CarouselCtrl', function ($scope) {
     var newWidth = 600 + slides.length + 1;
     slides.push({
       image: 'images/carousel'+currIndex+'.png',
-      htext: ['Lorem Ipsum dolor sit, consectetur adipiscing elit','Vivamus consequat lectus eu tristique congue','Sper ca faci acum nanica','Si te scoli cu puta mica'][slides.length % 4],
-      ptext: ['Pellentesque lobortis dolor non faucibus luctus','Ut vel neque sed enim lacinia molestie quis id tortor','Sper ca faci acum nanica','Si te scoli cu puta mica'][slides.length % 4],
+      htext: ['Lorem Ipsum dolor sit, consectetur adipiscing elit','Vivamus consequat lectus eu tristique congue','Nullam et mi finibus, malesuada dolor ac, commodo leo.','Sed quis lacus vestibulum, vestibulum orci non, lacinia arcu.'][slides.length % 4],
+      ptext: ['Pellentesque lobortis dolor non faucibus luctus','Ut vel neque sed enim lacinia molestie quis id tortor','Donec venenatis mi eget mauris pulvinar sodales at pharetra augue.',''][slides.length % 4],
       firstButtonText: 'Un Buton',
       secondButtonText: 'Altul',
       id: currIndex++
