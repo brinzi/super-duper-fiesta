@@ -13,9 +13,14 @@ angular.module('ui.bootstrap').controller('CarouselCtrl', function ($scope) {
     var newWidth = 600 + slides.length + 1;
     slides.push({
       image: 'images/carousel'+currIndex+'.png',
+      htext: ['Lorem Ipsum dolor sit, consectetur adipiscing elit','Vivamus consequat lectus eu tristique congue','Sper ca faci acum nanica','Si te scoli cu puta mica'][slides.length % 4],
+      ptext: ['Pellentesque lobortis dolor non faucibus luctus','Ut vel neque sed enim lacinia molestie quis id tortor','Sper ca faci acum nanica','Si te scoli cu puta mica'][slides.length % 4],
+      firstButtonText: 'Un Buton',
+      secondButtonText: 'Altul',
       id: currIndex++
     });
   };
+
 
   $scope.randomize = function() {
     var indexes = generateIndexesArray();
@@ -57,4 +62,9 @@ angular.module('ui.bootstrap').controller('CarouselCtrl', function ($scope) {
 
     return array;
   }
+
+  $scope.changeClass = function () {
+    $scope.class = "carousel-hover";
+  }
+
 });

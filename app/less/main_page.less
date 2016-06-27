@@ -19,7 +19,9 @@ html, body, .container-fluid, .row {
   width: 100%;
   height: 100%;
   background-color: @wrapper-bg;
+  position: relative;
 }
+
 
 #top-bar {
 
@@ -54,7 +56,9 @@ html, body, .container-fluid, .row {
 
   .navbar {
     margin-bottom: 0;
+    box-shadow: none;
   }
+
   .navbar .navbar-nav > li > a {
     color: @main-navbar-color;
   }
@@ -71,12 +75,86 @@ html, body, .container-fluid, .row {
   margin-right: 0;
 }
 
-
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
   margin-top: 0;
+
 }
 
+.carousel-content {
+  position: absolute;
+  top:28%;
+  text-align: left;
+  right: 50%;
+  left: 12%;
+
+  h2 {
+    font-size: 300%;
+    color: white;
+
+  }
+  p{
+    font-size: 1em;
+    color: white;
+    margin: 1em 0 2em 0 ;
+    font-family: serif;
+    font-weight: bold;
+
+  }
+
+  a {
+    margin: 10px 3px 10px 0;
+    padding: 0.80em;
+    border:white solid 2px;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Helvetica";
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  a:hover {
+    background-color: #fff;
+    color: #333;
+    transition: ease-out 200ms;
+    -webkit-transition: ease-out 200ms;
+  }
+
+  #button-white{
+    background-color: white;
+    color: #333;
+  }
+
+  #button-white:hover {
+    background: rgba(0,0,255,.5);
+    transition: ease-out 200ms;
+    -webkit-transition: ease-out 200ms;
+  }
 
 
+}
+
+.carousel-hover {
+  background-color: black;
+  opacity: 0.5;
+}
+
+#about {
+  margin: 2% 5% 1% 5%;
+  h3 {
+
+    font-size: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Helvetica";
+  }
+
+}
+
+footer {
+  background-color: #333;
+}

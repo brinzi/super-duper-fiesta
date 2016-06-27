@@ -30,26 +30,50 @@
     </div>
   </header>
 
-  <section id="CarouselSlideshow">
-    <div ng-controller="CarouselCtrl">
-      <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-        <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-          <img ng-src="{{slide.image}}">
-          <div class="carousel-caption">
-            <h4>Slide {{$index+1}}</h4>
-          </div>
-        </uib-slide>
-      </uib-carousel>
+  <section id="main-content">
+    <div id="carousel-slideshow">
+      <div ng-controller="CarouselCtrl">
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" ng-mouseenter="changeClass()">
+          <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" >
+            <img ng-src="{{slide.image}}" >
+            <div class="carousel-content">
+              <h2>{{slide.htext}}</h2>
+              <p>{{slide.ptext}}</p>
+              <a  href="#" id="button-white"> {{slide.firstButtonText}}</a>>
+              <a  href="#"> {{slide.secondButtonText}}</a>
+            </div>
+          </uib-slide>
+        </uib-carousel>
+      </div>
     </div>
   </section>
 
-    <section id="Bottom">
-      <div id="first">
-        <h4> Lorem ipsum </h4>
-      </div>
-    </section>
-  </div>
+  <section id="about">
+    <div id="title">
+      <h3>
+        <span>
+          About
+        </span>
+      </h3>
+    </div>
+    <div id="about content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lectus eu tristique congue. Ut vel neque sed enim lacinia molestie quis id tortor. Proin lobortis ante leo, id condimentum lorem consectetur non. Aliquam facilisis vitae arcu eu tincidunt. Curabitur ac sollicitudin enim, sit amet feugiat turpis. Quisque vel ultricies diam. Suspendisse faucibus, velit vitae fringilla hendrerit, libero justo sagittis metus, non luctus magna lorem eu lectus. Nullam auctor vestibulum lorem non ornare. Vivamus laoreet enim eget est suscipit, sed commodo erat sodales. In laoreet ac massa quis feugiat. Pellentesque lobortis dolor non faucibus luctus. Aenean eget purus arcu. Phasellus turpis massa, tempus sed tortor vel, rutrum consequat purus. Quisque bibendum sapien turpis, vitae sodales erat finibus vel. Suspendisse pretium diam et sodales maximus.</p>
+    </div>
+  </section>
 
+  <footer>
+    <div class="row">
+      <div class="container-fluid">
+        <div class="col-md-10">
+          <a>Licentuca</a>
+        </div>
+        <div class="col-md-2">
+          <a>Bodan Bodan Bodan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
 
 
