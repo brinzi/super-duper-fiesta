@@ -1,36 +1,46 @@
-<div id="wrapper">
-  <header>
+ <div id="wrapper">
+
+    <!--------------------------------------------- Top Bar --------------------------------------------->
+
     <div id="top-bar">
       <div class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
           <ul class="nav navbar-nav navbar-right">
             <li><a  href ng-click="registerStart()" ></span>{{topBarText1}}</a></li>
-            <li><a href="#/login" ><span class="glyphicon glyphicon-log-in"></span>{{topBarText2}}</a></li>
+            <li><a href="#/login" ><span class="glyphicon glyphicon-log-out"></span>{{topBarText2}}</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div id="main-nav">
-      <div class="navbar navbar-static-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">PostFIX</a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" ng-click=""></span>Home</a></li>
-              <li><a href="#discalimer-section" du-smooth-scroll du-scrollspy></span>Disclaimer</a></li>
-              <li><a href="#" ng-click=""></span>How to do THE SHIT</a></li>
-              <li><a href="#" ng-click=""></span>Patient Reports</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+    <!--------------------------------------------- Main Nav --------------------------------------------->
 
-  <section id="main-content">
+
+   <nav class="navbar navbar-default navbar-static-top">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#main"  du-smooth-scroll du-scrollspy>PostFix</a>
+       </div>
+       <div class="collapse navbar-collapse" id="main-nav">
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="#main" du-smooth-scroll du-scrollspy ng-click=""></span>Home</a></li>
+           <li><a href="#discalimer-section" du-smooth-scroll du-scrollspy></span>Disclaimer</a></li>
+           <li><a href="#how-to"  du-smooth-scroll du-scrollspy ng-click=""></span>How to do THE SHIT</a></li>
+           <li><a href="#patient-reports"  du-smooth-scroll du-scrollspy></span>Patient Reports</a></li>
+           <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+
+    <!--------------------------------------------- Slider --------------------------------------------->
+
+    <section id="main-content">
     <div id="carousel-slideshow">
       <div ng-controller="CarouselCtrl">
         <uib-carousel ng-class="" active="active" interval="myInterval" no-wrap="noWrapSlides">
@@ -55,7 +65,9 @@
     </div>
   </section>
 
-  <section name="discalimer-section" id="disclaimer">
+   <!--------------------------------------------- Disclaimer --------------------------------------------->
+
+   <section name="discalimer-section" id="disclaimer">
     <div class="about-content">
       <div class="section-title">
         <h2>
@@ -68,7 +80,7 @@
     </div>
   </section>
 
-  <section id="How-to">
+  <section id="how-to">
     <div class="howto-content">
       <div class="howto-text-block">
         <div class="howto--inner-text-block">
@@ -85,7 +97,7 @@
     </div>
   </section>
 
-  <!--------------------------Patient Reports --------------------------->
+   <!--------------------------------------------- Patient Reports --------------------------------------------->
 
   <section id="patient-reports">
     <div class="reports-content">
@@ -154,17 +166,23 @@
     </div>
   </section>
 
-  <footer>
+   <!--------------------------------------------- Footer --------------------------------------------->
+
+
+   <footer>
     <div class="container-fluid">
+      <div class="text-center">
+        <a href="#main" class="glyphicon glyphicon-chevron-up" du-smooth-scroll du-scrollspy  ></a>
+
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-6">
           <a>Licentuca</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-6">
           <a>Bodan Bodan Bodan</a>
         </div>
       </div>
-    </div>
+    </div></div>
   </footer>
 </div>
 
