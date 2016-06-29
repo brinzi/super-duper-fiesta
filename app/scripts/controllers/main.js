@@ -8,12 +8,7 @@
  * Controller of the oaseApp
  */
 angular.module('oaseApp')
-  .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log, processLogin,$location) {
     $scope.reports = [
       {
         "id": 1,
@@ -34,7 +29,19 @@ angular.module('oaseApp')
         "result":"Some other result"
       }
     ];
-    $scope.user = $sessionStorage.user;
+
+
+    $scope.user ="Bogdan"; //$sessionStorage.user;
+    if( $scope.user != null  )
+    {
+      $scope.topBarText1 = "Welcome "+$scope.user+",";
+      $scope.topBarText2 = "LogOut";
+    }
+    else
+    {
+      $scope.topBarText1 = "Register";
+      $scope.topBarText2 = "Login";
+    }
 
     $scope.selectedReport = -1;
     $scope.toggleReport = function (index) {
@@ -46,8 +53,6 @@ angular.module('oaseApp')
     $scope.loadImage = function () {
       $scope.openModal('lg');
     };
-
-
 
     $scope.items = ['image_modal'];
     $scope.animationsEnabled = true;
@@ -80,16 +85,17 @@ angular.module('oaseApp')
 
     $scope.$on('eventFired', function(event, result) {
 
-
       $scope.reports.push({
-
         "id": "some id",
         "timestamp": new Date(),
         "recommendation": "Go to doctor",
         "result": result
-
       });
     })
 
+    $scope.registerStart = function () {
+      processLogin.redirected = true;
+      $location.path('/login');
+      };
   });
 

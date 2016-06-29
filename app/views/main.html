@@ -4,8 +4,8 @@
       <div class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" ng-click="register()"></span>Register</a></li>
-            <li><a href="#" ng-click="login()"><span class="glyphicon glyphicon-log-in"></span>LogIn</a></li>
+            <li><a  href ng-click="registerStart()" ></span>{{topBarText1}}</a></li>
+            <li><a href="#/login" ><span class="glyphicon glyphicon-log-in"></span>{{topBarText2}}</a></li>
           </ul>
         </div>
       </div>
@@ -39,8 +39,15 @@
             <div class="carousel-content">
               <h1>{{slide.htext}}</h1>
               <p>{{slide.ptext}}</p>
-              <a  href="#" class="btn btn-default" id="button-white" role="button"> {{slide.firstButtonText}}</a>>
-              <a  href="#" class="btn btn-default" role="button"> {{slide.secondButtonText}}</a>
+              <!--a  href class="btn btn-default" id="button-white" role="button" > {{slide.firstButtonText}}</a>>
+              <a  href class="btn btn-default" role="button"> {{slide.secondButtonText}}</a-->
+              <form class="image-upload input-group" >
+                <span class="input-group-btn" >
+                 <a class="btn btn-primary .btn-file"  role="button">
+                   Submit Image <input type="file" onchange="angular.element(this).scope().loadImage()" id="inputFileToLoad" >
+                 </a>
+                </span>
+              </form>
             </div>
           </uib-slide>
         </uib-carousel>
@@ -177,13 +184,7 @@
 
    <div class="container-fluid" id="reports-container">
 
-     <form class="image-upload input-group">
-       <span class="input-group-btn">
-         <span class="btn btn-primary btn-file">
-           Submit Image <input type="file" onchange="angular.element(this).scope().loadImage()" id="inputFileToLoad" >
-         </span>
-       </span>
-     </form>
+
 
      <hr>
 

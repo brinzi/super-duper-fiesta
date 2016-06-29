@@ -37,7 +37,7 @@ var app = angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/main', {
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login',

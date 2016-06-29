@@ -12,6 +12,8 @@
  */
 angular.module('oaseApp')
   .service('processRegister', function ($http, $cookies) {
+
+
     var process = function (name ,surname, password, birthDate, user_email) {
 
       return $http({
