@@ -14,8 +14,9 @@ angular.module('oaseApp')
         'AngularJS',
         'Karma'
       ];
-      $scope.invalidLogin = false;
 
+
+      $scope.invalidLogin = false;
 
       $scope.items = ['register_modal'];
       $scope.animationsEnabled = true;
@@ -63,7 +64,15 @@ angular.module('oaseApp')
         });
       };
 
+    $scope.$on('$viewContentLoaded', function(){
+     if( processLogin.redirected ) {
+       $scope.openRegister();
+       processLogin.redirected = false
+     }
+
+    });
 
     }
+
   )
 ;

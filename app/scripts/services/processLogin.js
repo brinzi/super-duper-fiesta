@@ -9,6 +9,7 @@
  */
 angular.module('oaseApp')
   .service('processLogin', function ($http, $cookies) {
+    var redirected = false;
     var process = function (email, password) {
       console.log(btoa(email + ":" + password));
       return $http({
@@ -24,5 +25,8 @@ angular.module('oaseApp')
         return result;
       });
     };
-    return {process: process};
+    return {
+      process: process,
+      redirected : redirected
+    };
   });

@@ -21,7 +21,8 @@ var app = angular
     'ngTouch',
     'ui.bootstrap',
     'jkuri.datepicker',
-    'angularCSS'
+    'angularCSS',
+    'duScroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -36,7 +37,7 @@ var app = angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/main', {
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login',
