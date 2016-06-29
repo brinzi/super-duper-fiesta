@@ -41,11 +41,11 @@
               <p>{{slide.ptext}}</p>
               <!--a  href class="btn btn-default" id="button-white" role="button" > {{slide.firstButtonText}}</a>>
               <a  href class="btn btn-default" role="button"> {{slide.secondButtonText}}</a-->
-              <form class="image-upload input-group" >
+              <form class="input-group" >
                 <span class="input-group-btn" >
-                 <a class="btn btn-primary .btn-file"  role="button">
+                 <span href class="btn btn-primary btn-file"  >
                    Submit Image <input type="file" onchange="angular.element(this).scope().loadImage()" id="inputFileToLoad" >
-                 </a>
+                 </span>
                 </span>
               </form>
             </div>
@@ -68,7 +68,7 @@
     </div>
   </section>
 
-  <section id="How-to">
+  <!--section id="How-to">
     <div class="howto-content">
       <div class="howto-text-block">
         <div class="howto--inner-text-block">

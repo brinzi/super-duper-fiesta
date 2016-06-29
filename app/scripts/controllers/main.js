@@ -64,7 +64,7 @@ angular.module('oaseApp')
         templateUrl: 'views/image_modal.html',
         controller: 'ModalInstanceCtrl',
         size: size,
-        windowClass: 'gruntapp-modal-window',
+        windowClass: 'app-modal-window',
         resolve: {
           items: function () {
             return $scope.items;
