@@ -38,6 +38,7 @@ module.exports = function(config) {
       'bower_components/ngDatepicker/src/js/ngDatepicker.js',
       'bower_components/ng-model/dist/ng-model-1.0.1.min.js',
       'bower_components/angular-css/angular-css.js',
+      'bower_components/angular-scroll/angular-scroll.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

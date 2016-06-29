@@ -21,7 +21,8 @@ var app = angular
     'ngTouch',
     'ui.bootstrap',
     'jkuri.datepicker',
-    'angularCSS'
+    'angularCSS',
+    'duScroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
