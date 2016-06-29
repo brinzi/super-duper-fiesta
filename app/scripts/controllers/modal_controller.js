@@ -12,11 +12,8 @@
 // It is not the same as the $uibModal service used above.
 
 angular.module('oaseApp')
-  .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items, fileUpload) {
+  .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items, fileUpload, $uibModal) {
 
-    angular.element(document).ready(function () {
-     ImageLoad();
-    });
     $scope.items = items;
     $scope.selected = {
       item: $scope.items[0]
@@ -39,4 +36,32 @@ angular.module('oaseApp')
     $scope.cancel = function () {
       $uibModalInstance.dismiss('cancel');
     };
+
+    var openModal = function (size) {
+
+      var modalInstance = $uibModal.open({
+        animation: $scope.animationsEnabled,
+        templateUrl: '../../views/howto.html',
+        controller: 'HowToModalController',
+        size: size,
+        windowClass: 'app-modal-window',
+        resolve: {
+          items: function () {
+            return $scope.items;
+          }
+        }
+      });
+
+      modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+      }, function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+
+    angular.element(document).ready(function () {
+      openModal('sm');
+      ImageLoad();
+
+    });
   });

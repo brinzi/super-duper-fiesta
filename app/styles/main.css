@@ -58,7 +58,6 @@
   }
 }
 
-
 input[readonly] {
   background-color: white !important;
   cursor: text !important;
@@ -67,6 +66,8 @@ input[readonly] {
   max-width: 1200px;
   width: 80%;
 }
-
-
-
+#reference_model {
+ vertical-align: top;
+ height: 700px;
+  width: 400px;
+}
