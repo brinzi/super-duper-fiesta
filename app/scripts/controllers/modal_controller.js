@@ -44,7 +44,7 @@ angular.module('oaseApp')
         templateUrl: '../../views/howto.html',
         controller: 'HowToModalController',
         size: size,
-        windowClass: 'app-modal-window',
+        windowClass: 'app-howto-window',
         resolve: {
           items: function () {
             return $scope.items;
@@ -55,13 +55,12 @@ angular.module('oaseApp')
       modalInstance.result.then(function (selectedItem) {
         $scope.selected = selectedItem;
       }, function () {
-        $log.info('Modal dismissed at: ' + new Date());
+
       });
     };
-
     angular.element(document).ready(function () {
-      openModal('sm');
-      ImageLoad();
 
+      ImageLoad();
+      openModal('sm');
     });
   });

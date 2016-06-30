@@ -5,6 +5,7 @@ angular.module('oaseApp')
   .controller('HowToModalController', function ($scope, $uibModalInstance ) {
 
     $scope.ok = function () {
-      $uibModalInstance.dismiss('cancel');
+      $uibModalInstance.dismiss('ok');
+
     };
   });

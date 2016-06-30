@@ -191,57 +191,17 @@ section {
  }
 
 .howto-content {
-  background-position: bottom left;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(/images/how-to-background.jpg);
-  background-position: 2% 99%;
-  height: 74rem;
+  margin: 2% 5% 1% 5%;
   margin-top: 4rem;
   position: relative;
 }
 
-.howto-contents:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  background-color: #fff;
-}
-
-.howto-text-block {
-  background-color: #fff;
-  width: 60%;
-  left: 40%;
-  position: relative;
-
-}
-
-
-.howto-text-block:after {
-  content: ' ';
-  display: block;
-  position: absolute;
-  height: 5.5rem;
-  background-color: #fff;
-  right: 100%;
-  width: 70%;
-  top: 0;
-}
 
 .howto--inner-text-block {
   visibility: visible;
   position: relative;
-  left: 16%;
-  max-width: 60%;
-  padding-bottom: 8rem;
-}
+  max-width: 80%;
 
-.howto-content:after {
-    left: 0;
-    width: 40%;
-    height: 14rem;
 }
 
 #patient-reports {
@@ -252,12 +212,17 @@ section {
   padding: 1.2rem;
 }
 
-.report-title {
+.report-title, h4 {
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: #808285;
   line-height: 1.6rem;
   font-size: 1.5rem;
+}
+
+.report-title h5 {
+  font-size: 1.1rem;
+  font-weight: 200;
 }
 
 .report-date{
@@ -298,12 +263,21 @@ footer {
 
 .app-modal-window .modal-dialog {
   max-width: 1200px;
-  width: 80%;
+  min-width: 500px;
+  width: 75%;
 }
+.app-howto-window{
 
+}
 #reference_model {
   vertical-align: top;
   height: 700px;
   width: 400px;
+}
+.howto-text-block{
+
+  #reference_model{
+    float: right;
+  }
 }
 
