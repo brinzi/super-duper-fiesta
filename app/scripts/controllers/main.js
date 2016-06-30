@@ -31,10 +31,10 @@ angular.module('oaseApp')
     ];
 
 
-    $scope.user ="Bogdan"; //$sessionStorage.user;
+    $scope.user =/*"Bogdan";*/$sessionStorage.user;
     if( $scope.user != null  )
     {
-      $scope.topBarText1 = "Welcome "+$scope.user+",";
+      $scope.topBarText1 = "Welcome "+$scope.user;
       $scope.topBarText2 = "LogOut";
     }
     else
