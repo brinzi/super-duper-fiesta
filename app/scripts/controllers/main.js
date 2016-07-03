@@ -12,33 +12,29 @@ angular.module('oaseApp')
     $scope.reports = [];
 
 
-    $scope.user= null;
-    $scope.getAllReports = function() {
-
-      document.getElementById('patient-reports').style.display = 'block';
-
+    $scope.getRaport = function(c) {
       var conditions =  xmlService.getXMLReports().Diagnostics.Condition;
-      for( var c = 0; c <conditions.length; c++ )
-      {
-        $scope.reports.push({
-          "title": conditions[c].Title['#text'],
-          "timestamp": new Date(),
-          "recommendation": conditions[c].Recomandation['#text'],
-          "content": conditions[c].Text['#text']
-        });
-      }
+      $scope.reports.push({
+        "title": conditions[c].Title['#text'],
+        "timestamp": new Date(),
+        "recommendation": conditions[c].Recomandation['#text'],
+        "content": conditions[c].Text['#text']
+      });
+    }
+
+    $scope.getAllReports = function() {
+         console.log($scope.user.diagnosticList[0]);
+         for(var i = 0 ; i<$scope.user.diagnosticList.length ;i++)
+          $scope.getRaport($scope.user.diagnosticList[i]);
+
     }
 
     $scope.setUserSession = function () {
 
-
-      if( $scope.user != null  )
-      {
-        $scope.topBarText1 = "Welcome "+$scope.user;
+      if( $scope.user != null  ){
+        $scope.topBarText1 = "Welcome "+$scope.user.name;
         $scope.topBarText2 = "LogOut";
-      }
-      else
-      {
+      } else {
         $scope.topBarText1 = "Register";
         $scope.topBarText2 = "Login";
       }
@@ -79,13 +75,7 @@ angular.module('oaseApp')
     };
 
     $scope.$on('eventFired', function(event, result) {
-
-      $scope.reports.push({
-        "id": "some id",
-        "timestamp": new Date(),
-        "recommendation": "Go to doctor",
-        "result": result
-      });
+      $scope.getRaport(result);
     })
 
     $scope.registerStart = function () {
@@ -96,9 +86,11 @@ angular.module('oaseApp')
     function init(){
       if($sessionStorage.user != null) {
         $scope.user = $sessionStorage.user;
+        console.log($scope.user);
         $scope.getAllReports();
       }
       $scope.setUserSession();
+      document.getElementById('patient-reports').style.display = 'block';
     }
     $scope.$on('$viewContentLoaded', function(){
       init();

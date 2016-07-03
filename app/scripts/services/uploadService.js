@@ -6,7 +6,6 @@ angular.module('oaseApp')
     var uploadFileToUrl = function (file, uploadUrl) {
       var fd = new FormData();
       interestPoints = JSON.stringify(interestPoints);
-      console.log(interestPoints);
       fd.append('file', file);
       fd.append('points', interestPoints);
       $http.post(uploadUrl, fd, {
@@ -14,14 +13,8 @@ angular.module('oaseApp')
           headers: {'Content-Type': undefined}
         })
         .success(function (data) {
-
-          var values="";
-          for(var key in data) {
-            console.log(data[key]);
-            values += data[key].toString()+"\n";
-            console.log(values);
-          }
-          $rootScope.$broadcast('eventFired', values);
+          console.log(data);
+          $rootScope.$broadcast('eventFired', data);
         })
         .error(function () {
         });

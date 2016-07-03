@@ -17,8 +17,7 @@ angular.module('oaseApp')
         url : $cookies.url + '/LogIn',
         contentType:'application/json',
         data : {
-          email: email,
-          password: password
+          data:  btoa(email + " " + password)
         }
       }).
       then(function (result) {

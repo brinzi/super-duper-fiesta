@@ -21,7 +21,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#" ng-click=""></span>Home</a></li>
               <li><a href="#discalimer-section" du-smooth-scroll du-scrollspy></span>Disclaimer</a></li>
-              <li><a href="#" ng-click=""></span>Patient Reports</a></li>
+              <li><a href="#raports-section"  du-smooth-scroll du-scrollspy ></span>Patient Reports</a></li>
             </ul>
           </div>
         </div>
@@ -40,7 +40,7 @@
               <p>{{slide.ptext}}</p>
               <!--a  href class="btn btn-default" id="button-white" role="button" > {{slide.firstButtonText}}</a>>
               <a  href class="btn btn-default" role="button"> {{slide.secondButtonText}}</a-->
-              <form class="input-group" >
+              <form class="input-group" id="image-form">
                 <span class="input-group-btn" >
                  <span href class="btn btn-primary btn-file"  >
                    Submit Image <input type="file" onchange="angular.element(this).scope().loadImage()" id="inputFileToLoad" >
@@ -86,7 +86,7 @@
 
   <!--------------------------Patient Reports --------------------------->
 
-  <section id="patient-reports">
+  <section name="raports-section" id="patient-reports">
     <div class="reports-content">
       <div class="section-title">
         <h2>

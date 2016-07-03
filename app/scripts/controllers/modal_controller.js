@@ -32,17 +32,19 @@ angular.module('oaseApp')
       fileUpload.uploadFileToUrl(file, uploadUrl);
     };
     $scope.ok = function () {
-      if(interestPoints.length < 10){
+      if(interestPoints.length < 8){
         alert("Please mark all points")
         return;
       }
       $scope.uploadFile();
       $uibModalInstance.close($scope.selected.item);
+      document.getElementById('image-form').reset();
 
     };
 
     $scope.cancel = function () {
-      $uibModalInstance.dismiss('cancel');;
+      document.getElementById('image-form').reset();
+      $uibModalInstance.dismiss('cancel');
     };
 
     var openModal = function (size) {

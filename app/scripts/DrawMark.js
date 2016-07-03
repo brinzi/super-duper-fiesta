@@ -16,7 +16,7 @@ var getMousePos =  function(evt)  {
 
 var drawMark = function (evt) {
 
-  if (interestPoints.length >= 10){
+  if (interestPoints.length >= 8){
     console.log("here");
     return;
   }
