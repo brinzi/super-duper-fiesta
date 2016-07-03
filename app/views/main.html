@@ -40,13 +40,13 @@
               <p>{{slide.ptext}}</p>
               <!--a  href class="btn btn-default" id="button-white" role="button" > {{slide.firstButtonText}}</a>>
               <a  href class="btn btn-default" role="button"> {{slide.secondButtonText}}</a-->
-              <!--form class="input-group" >
+              <form class="input-group" >
                 <span class="input-group-btn" >
                  <span href class="btn btn-primary btn-file"  >
                    Submit Image <input type="file" onchange="angular.element(this).scope().loadImage()" id="inputFileToLoad" >
                  </span>
                 </span>
-              </form-->
+              </form>
             </div>
           </uib-slide>
         </uib-carousel>
@@ -63,7 +63,7 @@
           </span>
         </h2>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lectus eu tristique congue. Ut vel neque sed enim lacinia molestie quis id tortor. Proin lobortis ante leo, id condimentum lorem consectetur non. Aliquam facilisis vitae arcu eu tincidunt. Curabitur ac sollicitudin enim, sit amet feugiat turpis. Quisque vel ultricies diam. Suspendisse faucibus, velit vitae fringilla hendrerit, libero justo sagittis metus, non luctus magna lorem eu lectus. Nullam auctor vestibulum lorem non ornare. Vivamus laoreet enim eget est suscipit, sed commodo erat sodales. In laoreet ac massa quis feugiat. Pellentesque lobortis dolor non faucibus luctus. Aenean eget purus arcu. Phasellus turpis massa, tempus sed tortor vel, rutrum consequat purus. Quisque bibendum sapien turpis, vitae sodales erat finibus vel. Suspendisse pretium diam et sodales maximus.</p>
+     <p>Llacinia molestie quis id tortor. Proin lobortis ante leo, id condimentum lorem consectetur non. Aliquam facilisis vitae arcu eu tincidunt. Curabitur ac sollicitudin enim, sit amet feugiat turpis. Quisque vel ultricies diam. Suspendisse faucibus, velit vitae fringilla hendrerit, libero justo sagittis metus, non luctus magna lorem eu lectus. Nullam auctor vestibulum lorem non ornare. Vivamus laoreet enim eget est suscipit, sed commodo erat sodales. In laoreet ac massa quis feugiat. Pellentesque lobortis dolor non faucibus luctus. Aenean eget purus arcu. Phasellus turpis massa, tempus sed tortor vel, rutrum consequat purus. Quisque bibendum sapien turpis, vitae sodales erat finibus vel. Suspendisse pretium diam et sodales maximus.</p>
     </div>
   </section>
 
@@ -96,14 +96,30 @@
 
       <div class="reports-wrapper">
         <div class="container-fluid">
-          <div class="row">
-
-            <div class=" col-lg-4">
+          <div class="row" >
+            <div class=" col-lg-4" ng-repeat="raport in reports">
               <div class="report-header">
                 <div class="report-title">
+                 <h4>{{raport.title}}</h4>
+                 <h5>{{raport.recommendation}}</h5>
+                </div>
+                  <div class="report-date">
+                    <span>Date: 09/11/2014</span>
+                  </div>
+              </div>
+              <div class="report-content">
+                <p>
+                 {{raport.content}}
+                </p>
+              </div>
+          </div>
+
+            <!--div class=" col-lg-4" >
+              <div class="report-header">
+               <div class="report-title">
                   <h4>Kyphosis</h4>
                   <h5>An appointment to your doctor is required!</h5>
-                </div>
+                </di v>
                 <div class="report-date">
                   <span>Date: 09/11/2014</span>
                 </div>
@@ -155,7 +171,7 @@
                 <p>
                   Curabitur efficitur, mauris in convallis laoreet, odio erat tempor leo, at faucibus ante lectus sed mi. </p>
               </div>
-            </div>
+            </div-->
 
           </div>
         </div>

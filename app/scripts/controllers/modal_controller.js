@@ -18,6 +18,13 @@ angular.module('oaseApp')
     $scope.selected = {
       item: $scope.items[0]
     };
+
+    var removeImage = function () {
+      var imageHolder = document.getElementById("current_image");
+      var drawArea = document.getElementById("modal-body");
+      drawArea.removeChild(imageHolder);
+    };
+
     $scope.uploadFile = function () {
 
       var file = fileToLoad;
@@ -31,10 +38,11 @@ angular.module('oaseApp')
       }
       $scope.uploadFile();
       $uibModalInstance.close($scope.selected.item);
+
     };
 
     $scope.cancel = function () {
-      $uibModalInstance.dismiss('cancel');
+      $uibModalInstance.dismiss('cancel');;
     };
 
     var openModal = function (size) {
@@ -62,5 +70,6 @@ angular.module('oaseApp')
 
       ImageLoad();
       openModal('sm');
+
     });
   });

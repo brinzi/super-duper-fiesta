@@ -6,6 +6,7 @@ angular.module('oaseApp')
 
     $scope.ok = function () {
       $uibModalInstance.dismiss('ok');
+      
 
     };
   });

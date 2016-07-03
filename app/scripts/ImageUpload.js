@@ -59,18 +59,12 @@ var ImageLoad = function() {
 
         drawArea.appendChild(imageHolder);
 
-
         __user_image__.src = fileLoadedEvent.target.result;
-        ctx = imageHolder.getContext("2d");
-        console.log(drawArea);
 
+        ctx = imageHolder.getContext("2d");
 
         drawArea.style.display = "block";
-
-
         __user_image__.onload = function () {
-
-        //  ctx.drawImage(__user_image__, 0, 0);
 
           fitImageOn(imageHolder, __user_image__);
 

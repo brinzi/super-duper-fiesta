@@ -8,48 +8,43 @@
  * Controller of the oaseApp
  */
 angular.module('oaseApp')
-  .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log, processLogin,$location) {
-    $scope.reports = [
+  .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log, processLogin, xmlService,$location) {
+    $scope.reports = [];
+
+
+    $scope.user= null;
+    $scope.getAllReports = function() {
+
+      document.getElementById('patient-reports').style.display = 'block';
+
+      var conditions =  xmlService.getXMLReports().Diagnostics.Condition;
+      for( var c = 0; c <conditions.length; c++ )
       {
-        "id": 1,
-        "timestamp": new Date(),
-        "recommendation": "Go to doctor.",
-        "result":"Some result"
-      },
-      {
-        "id": 2,
-        "timestamp": new Date(),
-        "recommendation": "Go to home.",
-        "result":"Some other result"
-      },
-      {
-        "id": 23,
-        "timestamp": new Date(),
-        "recommendation": "Go to home.",
-        "result":"Some other result"
+        $scope.reports.push({
+          "title": conditions[c].Title['#text'],
+          "timestamp": new Date(),
+          "recommendation": conditions[c].Recomandation['#text'],
+          "content": conditions[c].Text['#text']
+        });
       }
-    ];
-
-
-    $scope.user =/*"Bogdan";*/$sessionStorage.user;
-    if( $scope.user != null  )
-    {
-      $scope.topBarText1 = "Welcome "+$scope.user;
-      $scope.topBarText2 = "LogOut";
-    }
-    else
-    {
-      $scope.topBarText1 = "Register";
-      $scope.topBarText2 = "Login";
     }
 
-    $scope.selectedReport = -1;
-    $scope.toggleReport = function (index) {
-      if ($scope.selectedReport === index)
-        $scope.selectedReport = -1;
+    $scope.setUserSession = function () {
+
+
+      if( $scope.user != null  )
+      {
+        $scope.topBarText1 = "Welcome "+$scope.user;
+        $scope.topBarText2 = "LogOut";
+      }
       else
-        $scope.selectedReport = index;
-    };
+      {
+        $scope.topBarText1 = "Register";
+        $scope.topBarText2 = "Login";
+      }
+
+    }
+
     $scope.loadImage = function () {
       $scope.openModal('lg');
     };
@@ -96,6 +91,19 @@ angular.module('oaseApp')
     $scope.registerStart = function () {
       processLogin.redirected = true;
       $location.path('/login');
-      };
+    };
+
+    function init(){
+      if($sessionStorage.user != null) {
+        $scope.user = $sessionStorage.user;
+        $scope.getAllReports();
+      }
+      $scope.setUserSession();
+    }
+    $scope.$on('$viewContentLoaded', function(){
+      init();
+    });
+
+
   });
 
