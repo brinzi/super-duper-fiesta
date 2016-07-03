@@ -45,6 +45,7 @@ var fitImageOn = function(canvas, imageObj) {
 var ImageLoad = function() {
  interestPoints = [];
   var ctx = null;
+  var __user_image__ = null;
   var filesSelected = document.getElementById("inputFileToLoad").files;
   if (filesSelected.length > 0) {
     fileToLoad = filesSelected[0];
@@ -55,12 +56,9 @@ var ImageLoad = function() {
       fileReader.onload = function (fileLoadedEvent) {
         var imageHolder = document.getElementById("current_image");
         var drawArea = document.getElementById("modal-body");
-        var __user_image__ = new Image();
 
-        drawArea.appendChild(imageHolder);
-
+        __user_image__ = new Image();
         __user_image__.src = fileLoadedEvent.target.result;
-
         ctx = imageHolder.getContext("2d");
 
         drawArea.style.display = "block";

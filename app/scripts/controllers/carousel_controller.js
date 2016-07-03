@@ -3,7 +3,7 @@
  */
 
 angular.module('ui.bootstrap').controller('CarouselCtrl', function ($scope) {
-  $scope.myInterval = 5000;
+  $scope.myInterval = 0;
   $scope.noWrapSlides = false;
   $scope.active = 0;
   var slides = $scope.slides = [];
@@ -59,7 +59,6 @@ angular.module('ui.bootstrap').controller('CarouselCtrl', function ($scope) {
         array[top] = tmp;
       }
     }
-
     return array;
   }
 
