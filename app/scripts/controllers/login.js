@@ -63,9 +63,9 @@ angular.module('oaseApp')
         });
       };
 
-   
+    $scope.$on('$viewContentLoaded', function(){
+        if(processLogin.redirected)
+          $scope.openRegister();
+    });
 
-    }
-
-  )
-;
+    });

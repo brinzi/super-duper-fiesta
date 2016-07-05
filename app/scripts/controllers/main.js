@@ -10,8 +10,12 @@
 angular.module('oaseApp')
   .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log, processLogin, xmlService,$location) {
     $scope.reports = [];
+    $scope.clearSessionData = function (){
+      $scope.reports = [];
+      document.getElementById('patient-reports').style.display = 'none';
 
-
+    };
+    
     $scope.getRaport = function(c) {
       var conditions =  xmlService.getXMLReports().Diagnostics.Condition;
       $scope.reports.push({
@@ -23,18 +27,21 @@ angular.module('oaseApp')
     }
 
     $scope.getAllReports = function() {
-         console.log($scope.user.diagnosticList[0]);
          for(var i = 0 ; i<$scope.user.diagnosticList.length ;i++)
           $scope.getRaport($scope.user.diagnosticList[i]);
 
     }
 
     $scope.setUserSession = function () {
+      $scope.user = $sessionStorage.user;
 
       if( $scope.user != null  ){
         $scope.topBarText1 = "Welcome "+$scope.user.name;
         $scope.topBarText2 = "LogOut";
+        $scope.getAllReports();
+        document.getElementById('patient-reports').style.display = 'block';
       } else {
+        $scope.clearSessionData();
         $scope.topBarText1 = "Register";
         $scope.topBarText2 = "Login";
       }
@@ -83,14 +90,20 @@ angular.module('oaseApp')
       $location.path('/login');
     };
 
-    function init(){
-      if($sessionStorage.user != null) {
-        $scope.user = $sessionStorage.user;
-        console.log($scope.user);
-        $scope.getAllReports();
-      }
+    $scope.logOut = function(){
+      $sessionStorage.user = null;
       $scope.setUserSession();
-      document.getElementById('patient-reports').style.display = 'block';
+    }
+
+    $scope.sessionOperation = function () {
+        if($scope.user != null )
+          $scope.logOut();
+         else
+          $location.path('/login');
+    }
+
+    function init(){
+      $scope.setUserSession();
     }
     $scope.$on('$viewContentLoaded', function(){
       init();

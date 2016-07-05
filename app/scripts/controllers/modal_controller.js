@@ -12,7 +12,7 @@
 // It is not the same as the $uibModal service used above.
 
 angular.module('oaseApp')
-  .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items, fileUpload, $uibModal) {
+  .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items, fileUpload, $uibModal,$sessionStorage) {
 
     $scope.items = items;
     $scope.selected = {
@@ -26,11 +26,10 @@ angular.module('oaseApp')
     };
 
     $scope.uploadFile = function () {
-
       var file = fileToLoad;
       var uploadUrl = "http://localhost:8080/UploadImage";
-      fileUpload.uploadFileToUrl(file, uploadUrl);
-    };
+      fileUpload.uploadFileToUrl(file, uploadUrl,$sessionStorage.user.id);
+      }
     $scope.ok = function () {
       if(interestPoints.length < 8){
         alert("Please mark all points")

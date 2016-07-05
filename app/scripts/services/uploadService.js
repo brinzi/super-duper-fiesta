@@ -3,11 +3,12 @@
  */
 angular.module('oaseApp')
   .service('fileUpload', ['$http', '$rootScope', function ($http, $rootScope) {
-    var uploadFileToUrl = function (file, uploadUrl) {
+    var uploadFileToUrl = function (file, uploadUrl, id) {
       var fd = new FormData();
       interestPoints = JSON.stringify(interestPoints);
       fd.append('file', file);
       fd.append('points', interestPoints);
+      fd.append('id', id);
       $http.post(uploadUrl, fd, {
           transformRequest: angular.identity,
           headers: {'Content-Type': undefined}
