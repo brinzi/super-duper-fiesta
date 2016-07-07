@@ -8,14 +8,22 @@
  * Controller of the oaseApp
  */
 angular.module('oaseApp')
-  .controller('MainCtrl', function ($scope,$uibModal,$sessionStorage,$log, processLogin, xmlService,$location) {
+  .controller('MainCtrl', function ($cookies,$scope,$uibModal,$sessionStorage,$log, processLogin, xmlService,$location) {
+
+  $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
+    $cookies.url = 'http://localhost:8080';
+
     $scope.reports = [];
     $scope.clearSessionData = function (){
       $scope.reports = [];
       document.getElementById('patient-reports').style.display = 'none';
 
     };
-    
+
     $scope.getRaport = function(c) {
       var conditions =  xmlService.getXMLReports().Diagnostics.Condition;
       $scope.reports.push({

@@ -32,6 +32,12 @@ var app = angular
         controllerAs: 'main',
         css:'/styles/generated.css'
       })
+      .when('/login/:a', {
+        templateUrl: 'views/about.html',
+        controller: 'ResetPwdController',
+        controllerAs: 'ResetCtrl',
+        css:'/styles/generated.css'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',

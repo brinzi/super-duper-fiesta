@@ -11,8 +11,7 @@ angular.module('oaseApp')
   .controller('LoginCtrl', function ($scope, $location, $cookies, $window, $sessionStorage, processLogin, $timeout, $uibModal) {
       this.awesomeThings = [
         'HTML5 Boilerplate',
-        'AngularJS',
-        'Karma'
+        'AngularJS'
       ];
 
       $scope.invalidLogin = false;
@@ -21,11 +20,10 @@ angular.module('oaseApp')
       $scope.animationsEnabled = true;
 
       $scope.openRegister = function (size) {
-
         var registerModalInstance = $uibModal.open({
           animation: $scope.animationsEnabled,
           templateUrl: 'views/register.html',
-          controller: 'RegisterCtrl',
+          controller: 'RecoverPwdController',
           size: size,
           resolve: {
             items: function () {
@@ -34,6 +32,7 @@ angular.module('oaseApp')
           }
         });
 
+
         registerModalInstance.result.then(function (selectedItem) {
           $scope.selected = selectedItem;
         }, function () {
@@ -41,16 +40,37 @@ angular.module('oaseApp')
         });
       };
 
+    $scope.openPwdRecover = function (size) {
+      var registerModalInstance = $uibModal.open({
+        animation: $scope.animationsEnabled,
+        templateUrl: 'views/pwd_recover.html',
+        controller: 'RegisterCtrl',
+        size: size,
+        resolve: {
+          items: function () {
+            return $scope.items;
+          }
+        }
+      });
+
+
+      registerModalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+      }, function () {
+        // $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+
 
       $scope.doLogin = function () {
         $cookies.url = 'http://localhost:8080'
 
         var login = processLogin.process($scope.user_email, $scope.password);
         login.then(function (result) {
-          if (result.status !== 200) {
-            $scope.invalidLogin = true;
+          if (result.status !== 200 ) {
+            console.log("here");
+            alert("Invalid username or password entered");
           } else {
-           // $cookies.token = result.data;
             $sessionStorage.user = result.data;
             console.log($sessionStorage.user);
 

@@ -22,6 +22,9 @@ angular.module('oaseApp')
       }).
       then(function (result) {
         return result;
+      }).
+      catch(function(result) {
+        return result;
       });
     };
     return {

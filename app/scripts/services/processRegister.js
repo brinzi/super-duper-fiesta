@@ -13,7 +13,7 @@
 angular.module('oaseApp')
   .service('processRegister', function ($http, $cookies) {
 
-
+    $cookies.url = 'http://localhost:8080';
     var process = function (name ,surname, password, birthDate, user_email) {
 
       return $http({
